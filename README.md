@@ -1,13 +1,13 @@
 # BudgetVoltex
 A sound voltex controller on the budget, for less than $50!
-![controller](https://imgur.com/mXFU2QD)
+![controller](https://i.imgur.com/mXFU2QD.jpg)
 # About
 This is a little project I made inspired by https://github.com/felixha00/lowcost-voltex and this repo is roughly documenting my journey throughout the building of the controller aswell as providing an updated (at least as of time of writing) tutorial on how you could build one yourself!
 This controller uses a concept called a "handwired keyboard," handwired keyboards are a style of keyboards and a hobby in itself, but in essence, it is basically a bunch of switches connected together in rows and columns that are controlled by an Arduino Pro Micro, to which can be flashed with manually written firmware made and compiled on [QMK MSYS](https://msys.qmk.fm) and then flashed with [QMK Toolbox](https://github.com/qmk/qmk_toolbox).
 # Materials
 * Any housing to hold the switches and knobs (preferably wood because it's a cheap material)
 * An Arduino Pro Micro with the AtMega32u4 chip (Any chinese knockoff will work)
-* EC11 Rotary Encoders
+* EC11 Rotary Encoders (that spin endlessly)
 * Mechanical Keyboard Switches x7
 * 1N4148 Diodes x7
 * A Soldering Iron
@@ -42,16 +42,18 @@ To briefly explain columns and rows, columns are the vertical ordering in which 
 
 Now for you to start wiring, place all your switches in your board, presumably you're gonna have 7 switches (from top to bottom left to right: START, BT-A, BT-B, BT-C, BT-D, FX-A and FX-B), to make it easier to understand, I've made an inaccurate ilustration of how the wiring should go on about, here's the subtitle:
 
-Big Black Sqaure: the board your switches go to
-Red Square: Right Laser encoder (it's flipped in the image because you're gonna work on the bottom of the board, therefore, everything's mirrored)
-Blue Square: Left Laser encoder
-Dark-ish blue square: The Arduino
-Black Squares: Switches
-Yellow dots inside the black square: Switch Pins
-Red lines in the switch pin: 1N4148 Diode (The diode **MUST BE SOLDERED TO THE BOTTOM PIN** and the polarity **MUST BE CORRECT IN A WAY THE PART WITH THE RED END IS SOLDERED INTO THE PIN AND PART WITH THE BLACK END IS SOLDERED INTO THE ROW CABLE**)
-Randomly colored lines: Wires
+* Big Black Sqaure: the board your switches go to
+* Red Square: Right Laser encoder (it's flipped in the image because you're gonna work on the bottom of the board, therefore, everything's mirrored)
+* Blue Square: Left Laser encoder
+* Dark-ish blue square: The Arduino
+* Black Squares: Switches
+* Yellow dots inside the black square: Switch Pins
+* Red lines in the switch pin: 1N4148 Diode (The diode **MUST BE SOLDERED TO THE BOTTOM PIN** and the polarity **MUST BE CORRECT IN A WAY THE PART WITH THE RED END IS SOLDERED INTO THE PIN AND PART WITH THE BLACK END IS SOLDERED INTO THE ROW CABLE**)
+* Randomly colored lines: Wires
 
 Note about the wires represented in the image: Each wire has a different color for easy comprehension, wires that cross eachother MUST NOT BE SOLDERED TEOGETHER, you HAVE to solder the wires to the correct pins and a wire of a single color that goes through multiple switches' pins should bridge the switches together, zoom into the end of the wire in the arduino (dark blue-ish square) to see some code (GND or a letter followed by a number), that is the pin you have to solder the cable to, please use this image as a guide for pins: https://imgur.com/biEyi6y (remove P before the code to get the actual pin, ex: PF4 is F4). The wire position is also not accurate in the image because it's meant to be understandable rather than accurate, pay attention to what pin your're soldering to what wire.
+
+Should you want to see my ~~garbage very confusing~~ wiring, check this link: https://i.imgur.com/6hF8EA9.jpg
 
 And you're done! Make sure you didn't short anything both in the board and in the wires because that could either fry the arduino or disrupt inputs and proceed to the next session.
 
