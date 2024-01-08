@@ -1,6 +1,6 @@
 # BudgetVoltex
 A sound voltex controller on the budget, for less than $50!
-[picture] 
+![controller](https://imgur.com/mXFU2QD)
 # About
 This is a little project I made inspired by https://github.com/felixha00/lowcost-voltex and this repo is roughly documenting my journey throughout the building of the controller aswell as providing an updated (at least as of time of writing) tutorial on how you could build one yourself!
 This controller uses a concept called a "handwired keyboard," handwired keyboards are a style of keyboards and a hobby in itself, but in essence, it is basically a bunch of switches connected together in rows and columns that are controlled by an Arduino Pro Micro, to which can be flashed with manually written firmware made and compiled on [QMK MSYS](https://msys.qmk.fm) and then flashed with [QMK Toolbox](https://github.com/qmk/qmk_toolbox).
